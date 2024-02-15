@@ -1,0 +1,16 @@
+---
+- name: Create folder in ubuntu group
+  hosts: ubuntu
+  tasks:
+    - name: Create a folder
+      ansible.builtin.file:
+        path: /home/ansible/{{ folder_name }}
+        state: directory
+
+- name: Create a file in testing folder
+  hosts: ubuntu
+  tasks: 
+    - name: Create a file
+      ansible.builtin.file:
+        path: /home/ansible/{{ folder_name }}/{{ file_name }}
+        state: touch

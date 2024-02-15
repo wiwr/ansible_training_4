@@ -1,0 +1,14 @@
+---
+- name: Check machines
+  hosts: localhost
+  connection: local 
+  tasks:
+    - name: Install application
+      ansible.builtin.apt:
+        name:
+          - git
+          - vim
+          - tmux
+          - less
+          - tree
+        state: present

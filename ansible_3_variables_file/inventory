@@ -1,0 +1,15 @@
+ubuntu_226_lvm
+
+[ubuntu]
+ubuntu_225
+ubuntu_228
+ubuntu_229
+
+[jenkins]
+jenkins_231
+jenkins_232
+jenkins_233
+
+[vms:children] 
+ubuntu
+jenkins

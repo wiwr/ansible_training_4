@@ -1,0 +1,9 @@
+app_list:
+  - less
+  - vim
+  - tmux
+  - htop
+  - openssh-server
+  - ufw
+  - net-tools
+  - iputils-ping

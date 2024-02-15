@@ -1,0 +1,10 @@
+---
+- name: Install packages
+  hosts: ubuntu
+  vars_files:
+    - vars/applist.yaml
+  tasks:
+    - name: Install application
+      ansible.builtin.apt:
+        name: "{{ app_list }}"
+        state: present

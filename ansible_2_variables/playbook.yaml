@@ -1,0 +1,23 @@
+---
+- name: Check machines
+  hosts: ubuntu
+  tasks:
+    - name: Use of ping module
+      ansible.builtin.ping:
+- name: Install packages
+  hosts: ubuntu
+  vars:
+    app_list:
+      - less
+      - vim
+      - tmux
+      - htop
+      - openssh-server
+      - ufw
+      - net-tools
+      - iputils-ping
+  tasks:
+    - name: Install application
+      ansible.builtin.apt:
+        name: "{{ app_list }}"
+        state: present
