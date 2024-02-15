@@ -1,0 +1,5 @@
+*.log
+*.cfg
+/articats/
+articats/
+*artifact*
